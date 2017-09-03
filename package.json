@@ -12,5 +12,6 @@
     "led"
   ],
   "author": "Sean Ferguson <sean@fergusean.com>",
+  "repository": "fergusean/node-flux-led",
   "license": "MIT"
 }
