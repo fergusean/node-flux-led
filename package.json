@@ -1,6 +1,6 @@
 {
   "name": "flux-led",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Lightweight (no deps) Node.js library to scan network for and control Flux (aka \"Magic Home\") WiFi RGB LED strips & light bulbs.",
   "main": "index.js",
   "scripts": {
