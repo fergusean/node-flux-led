@@ -92,7 +92,6 @@ class Bulb extends events.EventEmitter {
     }
 
     _handleSocketData(data) {
-        console.log('data', data.length, data);
         data.copy(this._inBuffer, this._inBufferLen);
         this._inBufferLen += data.length;
         this._processHandlers();
