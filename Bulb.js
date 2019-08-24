@@ -85,6 +85,20 @@ class Bulb extends events.EventEmitter {
             this.color = { r, g, b };
         });
     }
+    
+    setWarmWhite(w) {
+        if (!this._socket)
+            return;
+
+        this._writeBytes([ 0x31, 0, 0, 0, w, 0x0f, 0x0f ]);
+        this._getResponse(1, response => {
+            this.mode = "warmWhite";
+        });
+    }
+
+    setCoolWhite(w) {
+        this.setRgb(w, w, w);
+    }
 
     _handleSocketConnect() {
         this.emit('connected');
